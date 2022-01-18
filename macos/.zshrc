@@ -5,9 +5,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Python 3
+alias python='python3'
+alias pip='pip3'
+
 # Autocomplete dot files
-#compinit
-#_comp_options+=(globdots)
+setopt GLOBDOTS
 
 # Turn off all beeps
 unsetopt BEEP
@@ -45,3 +48,5 @@ alias ls='ls -A --color'
 # ls after cd
 autoload -U add-zsh-hook
 add-zsh-hook -Uz chpwd (){ls -A --color; }
+
+
